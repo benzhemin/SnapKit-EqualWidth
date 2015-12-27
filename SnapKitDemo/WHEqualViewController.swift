@@ -31,7 +31,7 @@ class WHEqualViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.hidden = true
+        //self.navigationController?.navigationBar.hidden = true
         
         self.view.backgroundColor = UIColor.whiteColor()
         
@@ -44,21 +44,23 @@ class WHEqualViewController: UIViewController {
     }
     
     //updateViewConstraints() only gets called if the constraints need to be updated.
+    //http://spin.atomicobject.com/2015/06/03/ios-square-view-auto-layout/
     override func updateViewConstraints(){
-        let orientation = UIDevice.currentDevice().orientation
 
-        whEqualView.snp_remakeConstraints { (make) -> Void in
-            make.width.equalTo(whEqualView.snp_height).priorityHigh()
+        whEqualView.snp_makeConstraints { (make) -> Void in
+            make.width.equalTo(whEqualView.snp_height).priorityRequired()
+            
             make.center.equalTo(self.view.snp_center)
             
-            if orientation == UIDeviceOrientation.Portrait {
-                
-                make.width.equalTo(self.view.snp_width).priorityRequired()
-            } else if orientation == UIDeviceOrientation.LandscapeLeft ||
-                orientation == UIDeviceOrientation.LandscapeRight {
-                    
-                make.height.equalTo(self.view.snp_height).priorityRequired()
-            }
+            make.height.lessThanOrEqualTo(self.view.snp_height).priorityRequired()
+            make.width.lessThanOrEqualTo(self.view.snp_width).priorityRequired()
+            
+            /*
+            What these constraints do is maximize the size the square to be the larger of the width or height of the containing view (whichever is smaller).
+            
+            */
+            make.height.equalTo(self.view.snp_height).priorityHigh()
+            make.width.equalTo(self.view.snp_width).priorityHigh()
         }
         
         super.updateViewConstraints()
