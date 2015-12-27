@@ -9,10 +9,16 @@
 import UIKit
 import Foundation
 
+class CustomButton : UIButton{
+    override func alignmentRectInsets() -> UIEdgeInsets {
+        return UIEdgeInsets(top:0, left:50, bottom:0, right:50)
+    }
+}
+
 class ViewController: UIViewController {
     let bgView : UIView
     
-    let addViewBtn : UIButton
+    let addViewBtn : CustomButton
     let delViewBtn : UIButton
     let refreshBtn : UIButton
     
@@ -23,7 +29,7 @@ class ViewController: UIViewController {
         
         self.bgView = UIView()
         self.constraintViews = [UIView]()
-        self.addViewBtn = UIButton(type: UIButtonType.Custom)
+        self.addViewBtn = CustomButton(type: UIButtonType.Custom)
         self.delViewBtn = UIButton(type: UIButtonType.Custom)
         self.refreshBtn = UIButton(type: UIButtonType.Custom)
         
@@ -59,7 +65,8 @@ class ViewController: UIViewController {
         self.addViewBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Highlighted)
         self.addViewBtn.titleLabel?.font = UIFont.boldSystemFontOfSize(19)
         self.view.addSubview(self.addViewBtn)
-        
+        self.addViewBtn.layer.borderColor = UIColor.redColor().CGColor
+        self.addViewBtn.layer.borderWidth = 1.0
         
         self.addViewBtn.snp_makeConstraints { (make) -> Void in
             make.bottom.equalTo(self.view.snp_bottom).offset(-10)
