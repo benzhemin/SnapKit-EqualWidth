@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window!.backgroundColor = UIColor.whiteColor()
         
-        window!.rootViewController = UINavigationController(rootViewController: ViewController()!)
+        //window!.rootViewController = UINavigationController(rootViewController: ViewController()!)
+        
+        window!.rootViewController = UINavigationController(rootViewController: WHEqualViewController()!)
         
         return true
     }
