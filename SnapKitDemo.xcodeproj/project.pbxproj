@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43A21531C322A7B00C8B68A /* RWAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */; };
+		C43A21551C323D9D00C8B68A /* RWGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */; };
+		C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21561C33787700C8B68A /* PracticeListViewController.swift */; };
 		C43B033D1C2F8235001D0B9D /* WHEqualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */; };
 		C4987FE81C27E96E001F5A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4987FE71C27E96E001F5A62 /* AppDelegate.swift */; };
 		C4987FEA1C27E96E001F5A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4987FE91C27E96E001F5A62 /* ViewController.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWAutoLayoutViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWGalleryViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWGalleryViewController.swift; sourceTree = "<group>"; };
+		C43A21561C33787700C8B68A /* PracticeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticeListViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/PracticeListViewController.swift; sourceTree = "<group>"; };
 		C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WHEqualViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/WHEqualViewController.swift; sourceTree = "<group>"; };
 		C4987FE41C27E96E001F5A62 /* SnapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4987FE71C27E96E001F5A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,8 +87,11 @@
 			children = (
 				C4987FF91C27E99A001F5A62 /* SnapKit */,
 				C4987FE71C27E96E001F5A62 /* AppDelegate.swift */,
+				C43A21561C33787700C8B68A /* PracticeListViewController.swift */,
 				C4987FE91C27E96E001F5A62 /* ViewController.swift */,
 				C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */,
+				C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */,
+				C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */,
 				C4987FEE1C27E96E001F5A62 /* Assets.xcassets */,
 				C4987FF31C27E96E001F5A62 /* Info.plist */,
 			);
@@ -185,11 +194,14 @@
 				C498800F1C27E99A001F5A62 /* EdgeInsets.swift in Sources */,
 				C49880091C27E99A001F5A62 /* ConstraintAttributes.swift in Sources */,
 				C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */,
+				C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */,
 				C498800C1C27E99A001F5A62 /* ConstraintMaker.swift in Sources */,
+				C43A21531C322A7B00C8B68A /* RWAutoLayoutViewController.swift in Sources */,
 				C4987FEA1C27E96E001F5A62 /* ViewController.swift in Sources */,
 				C4987FE81C27E96E001F5A62 /* AppDelegate.swift in Sources */,
 				C498800A1C27E99A001F5A62 /* ConstraintDescription.swift in Sources */,
 				C49880121C27E99A001F5A62 /* SourceLocation.swift in Sources */,
+				C43A21551C323D9D00C8B68A /* RWGalleryViewController.swift in Sources */,
 				C498800D1C27E99A001F5A62 /* ConstraintRelation.swift in Sources */,
 				C43B033D1C2F8235001D0B9D /* WHEqualViewController.swift in Sources */,
 				C49880111C27E99A001F5A62 /* SnapKit.swift in Sources */,
