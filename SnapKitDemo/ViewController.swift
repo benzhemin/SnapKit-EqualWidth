@@ -45,9 +45,11 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
         
         self.title = "swift SnapKit"
+        
+        self.view.backgroundColor = UIColor.whiteColor()
         
         bgView.backgroundColor = self.getRandomColor()
         self.view.addSubview(bgView)
