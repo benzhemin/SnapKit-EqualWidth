@@ -20,9 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window{
             window.backgroundColor = UIColor.whiteColor()
             
-            window.rootViewController = UINavigationController(rootViewController: ViewController()!)
+            //window.rootViewController = UINavigationController(rootViewController: ViewController()!)
             
             //window.rootViewController = UINavigationController(rootViewController: WHEqualViewController()!)
+            
+            //window.rootViewController = UINavigationController(rootViewController: RWAutoLayoutViewController()!)
+            
+            window.rootViewController = UINavigationController(rootViewController: PracticeListViewController()!)
+            
             window.makeKeyAndVisible()
         }
         
