@@ -115,8 +115,6 @@ class RWGalleryViewController: UIViewController {
     required convenience init?(coder: NSCoder){
         self.init(coder)
     }
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

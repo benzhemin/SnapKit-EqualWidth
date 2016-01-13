@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C408FE0C1C34DDAD005DDD99 /* DropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE0B1C34DDAD005DDD99 /* DropDownViewController.swift */; };
+		C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */; };
 		C43A21531C322A7B00C8B68A /* RWAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */; };
 		C43A21551C323D9D00C8B68A /* RWGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */; };
 		C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21561C33787700C8B68A /* PracticeListViewController.swift */; };
 		C43B033D1C2F8235001D0B9D /* WHEqualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */; };
+		C48F44071C3F5F03006FB08D /* ClockAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F44061C3F5F03006FB08D /* ClockAnimationViewController.swift */; };
+		C48F44091C412296006FB08D /* UIKitDynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */; };
+		C48F440B1C4209D1006FB08D /* UserGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */; };
+		C48F440D1C43CA75006FB08D /* SpringAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F440C1C43CA75006FB08D /* SpringAnimationViewController.swift */; };
 		C4987FE81C27E96E001F5A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4987FE71C27E96E001F5A62 /* AppDelegate.swift */; };
 		C4987FEA1C27E96E001F5A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4987FE91C27E96E001F5A62 /* ViewController.swift */; };
 		C4987FEF1C27E96E001F5A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4987FEE1C27E96E001F5A62 /* Assets.xcassets */; };
@@ -27,13 +33,21 @@
 		C49880121C27E99A001F5A62 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49880051C27E99A001F5A62 /* SourceLocation.swift */; };
 		C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49880061C27E99A001F5A62 /* View+SnapKit.swift */; };
 		C49880141C27E99A001F5A62 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49880071C27E99A001F5A62 /* ViewController+SnapKit.swift */; };
+		C4A1F2311C3CB04900D87FF3 /* AnimationExplainedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C408FE0B1C34DDAD005DDD99 /* DropDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DropDownViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/DropDownViewController.swift; sourceTree = "<group>"; };
+		C408FE0D1C34EC54005DDD99 /* learnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = learnSwift.playground; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/learnSwift.playground; sourceTree = "<group>"; };
+		C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationsViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/AnimationsViewController.swift; sourceTree = "<group>"; };
 		C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWAutoLayoutViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWGalleryViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWGalleryViewController.swift; sourceTree = "<group>"; };
 		C43A21561C33787700C8B68A /* PracticeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticeListViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/PracticeListViewController.swift; sourceTree = "<group>"; };
 		C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WHEqualViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/WHEqualViewController.swift; sourceTree = "<group>"; };
+		C48F44061C3F5F03006FB08D /* ClockAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockAnimationViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/ClockAnimationViewController.swift; sourceTree = "<group>"; };
+		C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitDynamicsViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/UIKitDynamicsViewController.swift; sourceTree = "<group>"; };
+		C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserGuideViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/UserGuideViewController.swift; sourceTree = "<group>"; };
+		C48F440C1C43CA75006FB08D /* SpringAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpringAnimationViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/SpringAnimationViewController.swift; sourceTree = "<group>"; };
 		C4987FE41C27E96E001F5A62 /* SnapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4987FE71C27E96E001F5A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4987FE91C27E96E001F5A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +67,7 @@
 		C49880051C27E99A001F5A62 /* SourceLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceLocation.swift; sourceTree = "<group>"; };
 		C49880061C27E99A001F5A62 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		C49880071C27E99A001F5A62 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationExplainedViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/AnimationExplainedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +107,16 @@
 				C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */,
 				C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */,
 				C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */,
+				C408FE0B1C34DDAD005DDD99 /* DropDownViewController.swift */,
+				C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */,
+				C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */,
+				C48F44061C3F5F03006FB08D /* ClockAnimationViewController.swift */,
+				C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */,
+				C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */,
+				C48F440C1C43CA75006FB08D /* SpringAnimationViewController.swift */,
 				C4987FEE1C27E96E001F5A62 /* Assets.xcassets */,
 				C4987FF31C27E96E001F5A62 /* Info.plist */,
+				C408FE0D1C34EC54005DDD99 /* learnSwift.playground */,
 			);
 			path = SnapKitDemo;
 			sourceTree = "<group>";
@@ -188,16 +211,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */,
 				C49880081C27E99A001F5A62 /* Constraint.swift in Sources */,
 				C49880101C27E99A001F5A62 /* LayoutConstraint.swift in Sources */,
 				C498800E1C27E99A001F5A62 /* Debugging.swift in Sources */,
 				C498800F1C27E99A001F5A62 /* EdgeInsets.swift in Sources */,
 				C49880091C27E99A001F5A62 /* ConstraintAttributes.swift in Sources */,
+				C48F44071C3F5F03006FB08D /* ClockAnimationViewController.swift in Sources */,
 				C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */,
+				C48F440D1C43CA75006FB08D /* SpringAnimationViewController.swift in Sources */,
 				C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */,
+				C4A1F2311C3CB04900D87FF3 /* AnimationExplainedViewController.swift in Sources */,
 				C498800C1C27E99A001F5A62 /* ConstraintMaker.swift in Sources */,
+				C48F44091C412296006FB08D /* UIKitDynamicsViewController.swift in Sources */,
 				C43A21531C322A7B00C8B68A /* RWAutoLayoutViewController.swift in Sources */,
 				C4987FEA1C27E96E001F5A62 /* ViewController.swift in Sources */,
+				C48F440B1C4209D1006FB08D /* UserGuideViewController.swift in Sources */,
 				C4987FE81C27E96E001F5A62 /* AppDelegate.swift in Sources */,
 				C498800A1C27E99A001F5A62 /* ConstraintDescription.swift in Sources */,
 				C49880121C27E99A001F5A62 /* SourceLocation.swift in Sources */,
@@ -207,6 +236,7 @@
 				C49880111C27E99A001F5A62 /* SnapKit.swift in Sources */,
 				C49880141C27E99A001F5A62 /* ViewController+SnapKit.swift in Sources */,
 				C498800B1C27E99A001F5A62 /* ConstraintItem.swift in Sources */,
+				C408FE0C1C34DDAD005DDD99 /* DropDownViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +328,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SnapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peeryuan.grads.SnapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,8 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SnapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peeryuan.grads.SnapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

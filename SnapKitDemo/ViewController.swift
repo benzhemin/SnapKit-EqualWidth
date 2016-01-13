@@ -204,7 +204,6 @@ class ViewController: UIViewController {
         let randomBlue:CGFloat = CGFloat(drand48())
         
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-        
     }
 
 }

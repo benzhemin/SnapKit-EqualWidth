@@ -17,7 +17,11 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
         
         practiceListTV = UITableView(frame: CGRectZero, style: UITableViewStyle.Plain)
         controllerList = [ViewController.self, WHEqualViewController.self,
-                          RWAutoLayoutViewController.self, RWGalleryViewController.self]
+                          RWAutoLayoutViewController.self, RWGalleryViewController.self,
+                          DropDownViewController.self, AnimationsViewController.self,
+                          AnimationExplainedViewController.self, ClockAnimationViewController.self,
+                          UIKitDynamicsViewController.self, UserGuideViewController.self,
+                          SpringAnimationViewController.self]
         
         if let coder = aDecoder {
             super.init(coder: coder)
@@ -67,8 +71,35 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
             controller = RWAutoLayoutViewController()
         }else if indexPath.row == 3 {
             controller = RWGalleryViewController()
+        }else if indexPath.row == 4 {
+            controller = DropDownViewController()
+        }else if indexPath.row == 5 {
+            controller = AnimationsViewController()
+        }else if indexPath.row == 6 {
+            controller = AnimationExplainedViewController()
+        }else if indexPath.row == 7 {
+            controller = ClockAnimationViewController()
+        }else if indexPath.row == 8 {
+            controller = UIKitDynamicsViewController()
+        }else if indexPath.row == 9 {
+            controller = UserGuideViewController()
+        }else if indexPath.row == 10 {
+            controller = SpringAnimationViewController()
         }
         
         self.navigationController?.pushViewController(controller!, animated: true)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
