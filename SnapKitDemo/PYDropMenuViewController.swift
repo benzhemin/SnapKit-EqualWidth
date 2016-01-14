@@ -12,23 +12,33 @@ enum PYDropMenuState{
     case Open
     case Close
     
-    mutating func toggle(){
+    mutating func toggle() -> PYDropMenuState{
         if self == Open {
             self = Close
         }else {
             self = Open
         }
+        return self
     }
 }
 
 protocol PYDropMenuProtocal:class{
-    func triggerDropDown(state st:PYDropMenuState);
+    func triggerDropDown(state st:PYDropMenuState)
+}
+
+public protocol PYDropMenuPickProtocal:class{
+    func dropMenuPickIndex(index:Int)
 }
 
 class PYDMConfiguration{
     var dropMenuTitles: [String]!
     
-    var menuTitle: String!
+    var menuTitle: String {
+        get {
+            return dropMenuTitles[self.currentIndex]
+        }
+    }
+    
     var menuIcon: UIImage!
     
     private let themeColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
@@ -37,6 +47,11 @@ class PYDMConfiguration{
     var tableCellBgColor: UIColor!
     var tableHeaderColor: UIColor!
     
+    var tableCellTintColor: UIColor!
+    var tableCellTextColor: UIColor!
+    
+    var currentIndex = 0
+    
     init(){
         self.initializeDefault()
     }
@@ -44,12 +59,14 @@ class PYDMConfiguration{
     func initializeDefault(){
         dropMenuTitles = ["Most Popular", "Latest", "Trending", "Nearest", "Top Pick"]
         
-        menuTitle = dropMenuTitles[0]
         menuIcon = UIImage(named: "arrow_down")
         
         dropMenuBgColor = UIColor.lightGrayColor()
         tableCellBgColor = themeColor
         tableHeaderColor = themeColor
+        
+        tableCellTintColor = UIColor.whiteColor()
+        tableCellTextColor = UIColor.whiteColor()
     }
 }
 
@@ -112,6 +129,8 @@ class PYNaviMenuView : UIView {
         menuLabel.snp_makeConstraints { (make) -> Void in
             make.leading.equalTo(self.snp_leading)
             make.centerY.equalTo(self.snp_centerY)
+            
+            make.top.bottom.equalTo(self)
         }
         
         menuImgView.snp_makeConstraints { (make) -> Void in
@@ -120,20 +139,19 @@ class PYNaviMenuView : UIView {
             make.bottom.equalTo(self.menuLabel.snp_baseline)
         }
         
-        
         super.updateConstraints()
     }
     
     func tapNaviTitleView(){
-
-        print("tapNaviTitleView")
         
-        UIView.animateWithDuration(0.4) { () -> Void in
-            self.menuImgView.transform = CGAffineTransformRotate(self.menuImgView.transform, CGFloat(M_PI))
-        }
+        self.delegate.triggerDropDown(state: menuState.toggle())
+    }
+    
+    override func layoutSubviews(){
+        super.layoutSubviews()
         
-        self.menuState.toggle()
-        self.delegate.triggerDropDown(state: self.menuState)
+        let size = self.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        self.bounds = CGRectMake(0, 0, size.width, size.height)
     }
 }
 
@@ -149,6 +167,8 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
     
     var configuration:PYDMConfiguration
     unowned var controller: UIViewController
+    
+    weak var delegate: PYDropMenuPickProtocal!
     
     init(controller:UIViewController, config: PYDMConfiguration) {
         self.controller = controller
@@ -177,11 +197,7 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
         menuView = PYNaviMenuView(config: config)
         menuView.delegate = self
         
-        let size = menuView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
-        
-        menuView.frame = CGRectMake(0, 0, size.width, size.height)
         controller.navigationItem.titleView = menuView
-        
     }
     
     func initializeDropMenuView(config:PYDMConfiguration){
@@ -238,35 +254,62 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        cell.tintColor = configuration.tableCellTintColor
+        
+        if indexPath.row == configuration.currentIndex{
+            cell.accessoryType = .Checkmark
+        }else {
+            cell.accessoryType = .None
+        }
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.backgroundColor = configuration.tableCellBgColor
-        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.font = UIFont.boldSystemFontOfSize(14)
-        
+        cell.textLabel?.textColor = configuration.tableCellTextColor
         cell.textLabel?.text = configuration.dropMenuTitles[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let lightColor = configuration.tableCellBgColor.colorWithAlphaComponent(0.5)
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.backgroundColor = lightColor
+        
+        configuration.currentIndex = indexPath.row
+        dropMenuTV.reloadData()
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.triggerDropDown(state: self.menuView.menuState.toggle())
+        }
+        
+        self.delegate.dropMenuPickIndex(indexPath.row)
     }
     
     func triggerDropDown(state state:PYDropMenuState){
         
         self.dropMenuTV.snp_updateConstraints { (make) -> Void in
             if state == .Close {
-                make.top.equalTo(self.wrapperView.snp_top).offset(-self.configuration.dropMenuTitles.count*44-self.headerHeight)
-                make.bottom.equalTo(self.wrapperView.snp_bottom)
+                make.top.equalTo(wrapperView.snp_top).offset(-self.configuration.dropMenuTitles.count*44-self.headerHeight)
+                make.bottom.equalTo(wrapperView.snp_bottom)
             }else{
-                make.top.equalTo(self.wrapperView.snp_top).offset(-self.headerHeight)
-                make.bottom.equalTo(self.wrapperView.snp_bottom)
-                self.wrapperView.hidden = false
+                make.top.equalTo(wrapperView.snp_top).offset(-self.headerHeight)
+                make.bottom.equalTo(wrapperView.snp_bottom)
+                wrapperView.hidden = false
             }
             
         }
         
+        UIView.animateWithDuration(0.4) { () -> Void in
+            self.menuView.menuImgView.transform = CGAffineTransformRotate(self.menuView.menuImgView.transform, CGFloat(M_PI))
+        }
+        
+        let damping = (state == PYDropMenuState.Close) ? 1 : 0.7
+        
         UIView.animateWithDuration(0.8, delay: 0,
-            usingSpringWithDamping: 0.7,
-            initialSpringVelocity: 10,
-            options: UIViewAnimationOptions.CurveLinear,
+            usingSpringWithDamping: CGFloat(damping),
+            initialSpringVelocity: 15,
+            options: [.CurveLinear, .AllowUserInteraction],
             animations: { () -> Void in
                 self.dropMenuTV.layoutIfNeeded()
                 
@@ -283,13 +326,19 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
                 }
             }
         )
+        
+        self.menuView.menuLabel.text = self.configuration.menuTitle
     }
     
 }
 
-class PYDropMenuViewController: UIViewController{
+class PYDropMenuViewController: UIViewController, PYDropMenuPickProtocal{
     let themeColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
     var dropMenu : PYDropMenu!
+    
+    var centerLabel: UILabel!
+    
+    var config: PYDMConfiguration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -300,9 +349,25 @@ class PYDropMenuViewController: UIViewController{
         
         self.view.backgroundColor = UIColor.whiteColor()
         
-     
-        dropMenu = PYDropMenu(controller: self, config: PYDMConfiguration())
+        config = PYDMConfiguration()
+        dropMenu = PYDropMenu(controller: self, config: config)
+        dropMenu.delegate = self
         
+        centerLabel = UILabel()
+        centerLabel.font = UIFont.boldSystemFontOfSize(23)
+        centerLabel.textColor = UIColor.blackColor()
+        centerLabel.backgroundColor = UIColor.clearColor()
+        self.view.addSubview(centerLabel)
+        
+        centerLabel.snp_makeConstraints { (make) -> Void in
+            make.center.equalTo(self.view)
+        }
+        
+        self.dropMenuPickIndex(0)
+    }
+    
+    func dropMenuPickIndex(index: Int) {
+        centerLabel.text = config.menuTitle
     }
 }
 
