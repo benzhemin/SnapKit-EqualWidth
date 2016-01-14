@@ -111,18 +111,15 @@ class PYNaviMenuView : UIView {
         
         menuLabel.snp_makeConstraints { (make) -> Void in
             make.leading.equalTo(self.snp_leading)
-            make.trailing.equalTo(self.snp_trailing)
-            make.top.equalTo(self.snp_top)
-            make.bottom.equalTo(self.snp_bottom)
+            make.centerY.equalTo(self.snp_centerY)
         }
         
-        /*
         menuImgView.snp_makeConstraints { (make) -> Void in
             make.leading.equalTo(self.menuLabel.snp_trailing).offset(10)
             make.trailing.equalTo(self.snp_trailing)
             make.bottom.equalTo(self.menuLabel.snp_baseline)
         }
-        */
+        
         
         super.updateConstraints()
     }
@@ -164,6 +161,15 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
         self.initializeMenuView(config)
         self.initializeDropMenuView(config)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationChanged:", name: UIDeviceOrientationDidChangeNotification, object: nil)
+    }
+    
+    //fix device orientation changed, navigation height changed bug
+    func orientationChanged(notify:NSNotification){
+        //UIDevice.currentDevice().orientation
+        wrapperView.snp_updateConstraints { (make) -> Void in
+            make.top.equalTo(CGRectGetMaxY(self.controller.navigationController!.navigationBar.frame))
+        }
     }
     
     //initialize menu
@@ -174,7 +180,7 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
         let size = menuView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         
         menuView.frame = CGRectMake(0, 0, size.width, size.height)
-        controller.navigationController?.navigationItem.titleView = menuView
+        controller.navigationItem.titleView = menuView
         
     }
     
@@ -195,7 +201,6 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
         
         backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.lightGrayColor()
-        backgroundView.alpha = 0.6
         wrapperView.addSubview(backgroundView)
         backgroundView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(wrapperView)
@@ -222,7 +227,9 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
             make.top.equalTo(self.wrapperView).offset(-self.configuration.dropMenuTitles.count*44-headerHeight)
             make.bottom.equalTo(self.wrapperView.snp_bottom)
         }
-
+        
+        self.backgroundView.alpha = 0.0
+        self.wrapperView.hidden = true
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -244,9 +251,6 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
     
     func triggerDropDown(state state:PYDropMenuState){
         
-        //self.dropMenuTV.reloadData()
-        //self.dropMenuTV.layoutIfNeeded()
-        
         self.dropMenuTV.snp_updateConstraints { (make) -> Void in
             if state == .Close {
                 make.top.equalTo(self.wrapperView.snp_top).offset(-self.configuration.dropMenuTitles.count*44-self.headerHeight)
@@ -254,18 +258,29 @@ class PYDropMenu: NSObject, PYDropMenuProtocal, UITableViewDelegate, UITableView
             }else{
                 make.top.equalTo(self.wrapperView.snp_top).offset(-self.headerHeight)
                 make.bottom.equalTo(self.wrapperView.snp_bottom)
+                self.wrapperView.hidden = false
             }
             
         }
         
-        UIView.animateWithDuration(0.7, delay: 0,
+        UIView.animateWithDuration(0.8, delay: 0,
             usingSpringWithDamping: 0.7,
-            initialSpringVelocity: 15,
+            initialSpringVelocity: 10,
             options: UIViewAnimationOptions.CurveLinear,
             animations: { () -> Void in
                 self.dropMenuTV.layoutIfNeeded()
+                
+                if state == .Open {
+                    self.backgroundView.alpha = 0.5
+                }else {
+                    self.backgroundView.alpha = 0
+                }
             }, completion: { (finish) -> Void in
                 
+                if self.menuView.menuState == .Close {
+                    
+                    self.wrapperView.hidden = true
+                }
             }
         )
     }
