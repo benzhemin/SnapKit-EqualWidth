@@ -118,7 +118,7 @@ class PYNaviMenuView : UIView {
         menuLabel.text = self.configuration.menuTitle
         menuImgView.image = self.configuration.menuIcon
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: "tapNaviTitleView")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapNaviTitleView))
         self.addGestureRecognizer(tapGesture)
         
         self.updateConstraints()

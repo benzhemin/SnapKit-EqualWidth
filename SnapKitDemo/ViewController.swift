@@ -16,16 +16,15 @@ class CustomButton : UIButton{
 }
 
 class ViewController: UIViewController {
-    let bgView : UIView
+    var bgView : UIView!
     
-    let addViewBtn : CustomButton
-    let delViewBtn : UIButton
-    let refreshBtn : UIButton
+    var addViewBtn : CustomButton!
+    var delViewBtn : UIButton!
+    var refreshBtn : UIButton!
     
-    var constraintViews:[UIView];
+    var constraintViews:[UIView]!;
     
-    //构造了一个无参数构造函数
-    init?(_ coder: NSCoder? = nil){
+    override func viewDidLoad() {
         
         self.bgView = UIView()
         self.constraintViews = [UIView]()
@@ -33,19 +32,7 @@ class ViewController: UIViewController {
         self.delViewBtn = UIButton(type: UIButtonType.Custom)
         self.refreshBtn = UIButton(type: UIButtonType.Custom)
         
-        if let aCoder=coder {
-            super.init(coder: aCoder)
-        }else {
-            super.init(nibName: nil, bundle: nil)
-        }
-    }
-    
-    required convenience init?(coder: NSCoder){
-        self.init(coder)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
         
         self.title = "swift SnapKit"
         
@@ -76,7 +63,7 @@ class ViewController: UIViewController {
             make.trailing.equalTo(self.view.snp_centerX).offset(-20)
         }
         
-        self.addViewBtn.addTarget(self, action: "pressAddBtn:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.addViewBtn.addTarget(self, action: #selector(pressAddBtn), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.delViewBtn.backgroundColor = UIColor.clearColor()
         self.delViewBtn.setTitle("Delete", forState: UIControlState.Normal)
@@ -91,7 +78,7 @@ class ViewController: UIViewController {
             make.leading.equalTo(self.view.snp_centerX).offset(20)
         }
         
-        self.delViewBtn.addTarget(self, action: "pressDelBtn:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.delViewBtn.addTarget(self, action: #selector(pressDelBtn), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.refreshBtn.backgroundColor = UIColor.clearColor()
         self.refreshBtn.setTitle("Refresh", forState: UIControlState.Normal)
@@ -105,7 +92,7 @@ class ViewController: UIViewController {
             
             make.trailing.equalTo(self.view.snp_trailing).offset(-10)
         }
-        self.refreshBtn.addTarget(self, action: "pressRefreshBtn:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.refreshBtn.addTarget(self, action: #selector(pressRefreshBtn), forControlEvents: UIControlEvents.TouchUpInside)
     }
 
     override func updateViewConstraints() {

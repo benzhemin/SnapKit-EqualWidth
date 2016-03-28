@@ -10,29 +10,16 @@ import UIKit
 
 class RWAutoLayoutViewController: UIViewController {
 
-    let upperLeft : UIView
-    let upperRight : UIView
-    let bottom : UIView
+    var upperLeft : UIView!
+    var upperRight : UIView!
+    var bottom : UIView!
     
-    //构造了一个无参数构造函数
-    init?(_ coder: NSCoder? = nil){
-        
+    override func viewDidLoad() {
         self.upperLeft = UIView()
         self.upperRight = UIView()
         self.bottom = UIView()
+
         
-        if let aCoder=coder {
-            super.init(coder: aCoder)
-        }else {
-            super.init(nibName: nil, bundle: nil)
-        }
-    }
-    
-    required convenience init?(coder: NSCoder){
-        self.init(coder)
-    }
-    
-    override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.whiteColor()

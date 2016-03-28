@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		C408FE0C1C34DDAD005DDD99 /* PYDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */; };
 		C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */; };
+		C431DA811C523218001A22D6 /* NeedsDisplayForKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C431DA801C523218001A22D6 /* NeedsDisplayForKeyViewController.swift */; };
 		C43A21531C322A7B00C8B68A /* RWAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */; };
 		C43A21551C323D9D00C8B68A /* RWGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */; };
 		C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21561C33787700C8B68A /* PracticeListViewController.swift */; };
 		C43B033D1C2F8235001D0B9D /* WHEqualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */; };
+		C47CDEE01C675A3200CAC73E /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */; };
+		C47CDEE21C675B8700CAC73E /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDEE11C675B8700CAC73E /* SwiftHEXColors.swift */; };
+		C47CDF281C734F5400CAC73E /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */; };
 		C48F44071C3F5F03006FB08D /* ClockAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F44061C3F5F03006FB08D /* ClockAnimationViewController.swift */; };
 		C48F44091C412296006FB08D /* UIKitDynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */; };
 		C48F440B1C4209D1006FB08D /* UserGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */; };
@@ -34,16 +38,24 @@
 		C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49880061C27E99A001F5A62 /* View+SnapKit.swift */; };
 		C49880141C27E99A001F5A62 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49880071C27E99A001F5A62 /* ViewController+SnapKit.swift */; };
 		C4A1F2311C3CB04900D87FF3 /* AnimationExplainedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */; };
+		C4F9E96C1CA651890047565A /* IntrinsicContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */; };
+		C4F9E96E1CA6C97E0047565A /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E96D1CA6C97E0047565A /* TagViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PYDropMenuViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/PYDropMenuViewController.swift; sourceTree = "<group>"; };
 		C408FE0D1C34EC54005DDD99 /* learnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = learnSwift.playground; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/learnSwift.playground; sourceTree = "<group>"; };
 		C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationsViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/AnimationsViewController.swift; sourceTree = "<group>"; };
+		C431DA801C523218001A22D6 /* NeedsDisplayForKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedsDisplayForKeyViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/NeedsDisplayForKeyViewController.swift; sourceTree = "<group>"; };
 		C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWAutoLayoutViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWGalleryViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWGalleryViewController.swift; sourceTree = "<group>"; };
 		C43A21561C33787700C8B68A /* PracticeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticeListViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/PracticeListViewController.swift; sourceTree = "<group>"; };
 		C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WHEqualViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/WHEqualViewController.swift; sourceTree = "<group>"; };
+		C46C28351C8C4C6B00498BB1 /* compute.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = compute.playground; sourceTree = "<group>"; };
+		C46C28CB1C99024600498BB1 /* exercise.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = exercise.playground; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/exercise.playground; sourceTree = "<group>"; };
+		C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/GradientViewController.swift; sourceTree = "<group>"; };
+		C47CDEE11C675B8700CAC73E /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
+		C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBarViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/SearchBarViewController.swift; sourceTree = "<group>"; };
 		C48F44061C3F5F03006FB08D /* ClockAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockAnimationViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/ClockAnimationViewController.swift; sourceTree = "<group>"; };
 		C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitDynamicsViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/UIKitDynamicsViewController.swift; sourceTree = "<group>"; };
 		C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserGuideViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/UserGuideViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +80,8 @@
 		C49880061C27E99A001F5A62 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		C49880071C27E99A001F5A62 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
 		C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationExplainedViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/AnimationExplainedViewController.swift; sourceTree = "<group>"; };
+		C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntrinsicContentViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/IntrinsicContentViewController.swift; sourceTree = "<group>"; };
+		C4F9E96D1CA6C97E0047565A /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +128,17 @@
 				C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */,
 				C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */,
 				C48F440C1C43CA75006FB08D /* SpringAnimationViewController.swift */,
+				C431DA801C523218001A22D6 /* NeedsDisplayForKeyViewController.swift */,
+				C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */,
+				C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */,
+				C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */,
+				C4F9E96D1CA6C97E0047565A /* TagViewController.swift */,
 				C4987FEE1C27E96E001F5A62 /* Assets.xcassets */,
 				C4987FF31C27E96E001F5A62 /* Info.plist */,
 				C408FE0D1C34EC54005DDD99 /* learnSwift.playground */,
+				C47CDEE11C675B8700CAC73E /* SwiftHEXColors.swift */,
+				C46C28351C8C4C6B00498BB1 /* compute.playground */,
+				C46C28CB1C99024600498BB1 /* exercise.playground */,
 			);
 			path = SnapKitDemo;
 			sourceTree = "<group>";
@@ -174,6 +196,7 @@
 				TargetAttributes = {
 					C4987FE31C27E96E001F5A62 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 4BMBQ567ZQ;
 					};
 				};
 			};
@@ -213,14 +236,18 @@
 			files = (
 				C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */,
 				C49880081C27E99A001F5A62 /* Constraint.swift in Sources */,
+				C431DA811C523218001A22D6 /* NeedsDisplayForKeyViewController.swift in Sources */,
 				C49880101C27E99A001F5A62 /* LayoutConstraint.swift in Sources */,
 				C498800E1C27E99A001F5A62 /* Debugging.swift in Sources */,
 				C498800F1C27E99A001F5A62 /* EdgeInsets.swift in Sources */,
 				C49880091C27E99A001F5A62 /* ConstraintAttributes.swift in Sources */,
+				C4F9E96C1CA651890047565A /* IntrinsicContentViewController.swift in Sources */,
 				C48F44071C3F5F03006FB08D /* ClockAnimationViewController.swift in Sources */,
+				C47CDEE21C675B8700CAC73E /* SwiftHEXColors.swift in Sources */,
 				C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */,
 				C48F440D1C43CA75006FB08D /* SpringAnimationViewController.swift in Sources */,
 				C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */,
+				C4F9E96E1CA6C97E0047565A /* TagViewController.swift in Sources */,
 				C4A1F2311C3CB04900D87FF3 /* AnimationExplainedViewController.swift in Sources */,
 				C498800C1C27E99A001F5A62 /* ConstraintMaker.swift in Sources */,
 				C48F44091C412296006FB08D /* UIKitDynamicsViewController.swift in Sources */,
@@ -234,6 +261,8 @@
 				C498800D1C27E99A001F5A62 /* ConstraintRelation.swift in Sources */,
 				C43B033D1C2F8235001D0B9D /* WHEqualViewController.swift in Sources */,
 				C49880111C27E99A001F5A62 /* SnapKit.swift in Sources */,
+				C47CDEE01C675A3200CAC73E /* GradientViewController.swift in Sources */,
+				C47CDF281C734F5400CAC73E /* SearchBarViewController.swift in Sources */,
 				C49880141C27E99A001F5A62 /* ViewController+SnapKit.swift in Sources */,
 				C498800B1C27E99A001F5A62 /* ConstraintItem.swift in Sources */,
 				C408FE0C1C34DDAD005DDD99 /* PYDropMenuViewController.swift in Sources */,
@@ -260,7 +289,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhe Zhang (H7W7W7S4CJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhe Zhang (H7W7W7S4CJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -282,6 +312,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "6f5939ca-ffa8-4bb1-8ea8-e133236db53b";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -304,7 +335,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zhe Zhang (H7W7W7S4CJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhe Zhang (H7W7W7S4CJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -319,6 +351,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "6f5939ca-ffa8-4bb1-8ea8-e133236db53b";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -329,11 +362,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SnapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.peeryuan.grads.SnapKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peeryuan.SnapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6f5939ca-ffa8-4bb1-8ea8-e133236db53b";
 			};
 			name = Debug;
 		};
@@ -342,11 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SnapKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.peeryuan.grads.SnapKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peeryuan.SnapKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6f5939ca-ffa8-4bb1-8ea8-e133236db53b";
 			};
 			name = Release;
 		};

@@ -11,7 +11,7 @@ import UIKit
 class PracticeListViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
 
     let practiceListTV : UITableView
-    let controllerList : [NSObject.Type]
+    let controllerList : [UIViewController.Type]
     
     init?(_ aDecoder: NSCoder? = nil) {
         
@@ -21,7 +21,9 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
                           PYDropMenuViewController.self, AnimationsViewController.self,
                           AnimationExplainedViewController.self, ClockAnimationViewController.self,
                           UIKitDynamicsViewController.self, UserGuideViewController.self,
-                          SpringAnimationViewController.self]
+                          SpringAnimationViewController.self, NeedsDisplayForKeyViewController.self,
+                          GradientViewController.self, SearchBarViewController.self,
+                          IntrinsicContentViewController.self, TagViewController.self]
         
         if let coder = aDecoder {
             super.init(coder: coder)
@@ -46,6 +48,28 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
         self.practiceListTV.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(self.view)
         }
+        
+        
+        let group = dispatch_group_create()
+        
+        dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            print("enter first dispatch")
+            NSThread.sleepForTimeInterval(5.0)
+            print("do some long running task")
+        }
+        
+        dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            print("enter second dispatch")
+            NSThread.sleepForTimeInterval(2.0)
+            print("do some short running task")
+        }
+        
+        let localQueue = dispatch_queue_create("LocalQueue", DISPATCH_QUEUE_CONCURRENT)
+        dispatch_group_notify(group, localQueue) { () -> Void in
+            print("Hello dispatch group queue")
+        }
+        
+        print("check to see continue")
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,7 +86,15 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var controller : UIViewController?
+        
+
+        var controller: UIViewController? = nil
+        
+        //http://swifter.tips/self-anyclass/
+        let controllerClass = self.controllerList[indexPath.row]
+        controller = controllerClass.init()
+        
+        /*
         if indexPath.row == 0{
             controller = ViewController()
         }else if indexPath.row == 1{
@@ -85,7 +117,14 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
             controller = UserGuideViewController()
         }else if indexPath.row == 10 {
             controller = SpringAnimationViewController()
+        }else if indexPath.row == 11 {
+            controller = NeedsDisplayForKeyViewController()
+        }else if indexPath.row == 12 {
+            controller = GradientViewController()
+        }else if indexPath.row == 13 {
+            controller = SearchBarViewController()
         }
+        */
         
         self.navigationController?.pushViewController(controller!, animated: true)
     }

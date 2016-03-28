@@ -96,27 +96,13 @@ class RWGalleryViewController: UIViewController {
         "Brad" : "Brad Cox"
     ];
     
-    var viewList: [View]
-    var viewBgColor: [UIColor]
+    var viewList: [View]!
+    var viewBgColor: [UIColor]!
     
-    //构造了一个无参数构造函数
-    init?(_ coder: NSCoder? = nil){
-        
+    override func viewDidLoad() {
         viewList = [View]()
         viewBgColor = [UIColor.greenColor(), UIColor.yellowColor(), UIColor.redColor(), UIColor.blueColor()]
         
-        if let aCoder=coder {
-            super.init(coder: aCoder)
-        }else {
-            super.init(nibName: nil, bundle: nil)
-        }
-    }
-    
-    required convenience init?(coder: NSCoder){
-        self.init(coder)
-    }
-    
-    override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.whiteColor()

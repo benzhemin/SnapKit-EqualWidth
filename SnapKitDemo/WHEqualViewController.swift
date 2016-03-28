@@ -10,25 +10,11 @@ import UIKit
 
 class WHEqualViewController: UIViewController {
     
-    let whEqualView : UIView
-    
-    //构造了一个无参数构造函数
-    init?(_ coder: NSCoder? = nil){
-        
-        self.whEqualView = UIView()
-        
-        if let aCoder=coder {
-            super.init(coder: aCoder)
-        }else {
-            super.init(nibName: nil, bundle: nil)
-        }
-    }
-    
-    required convenience init?(coder: NSCoder){
-        self.init(coder)
-    }
+    var whEqualView : UIView!
     
     override func viewDidLoad() {
+        self.whEqualView = UIView()
+        
         super.viewDidLoad()
         
         //self.navigationController?.navigationBar.hidden = true
