@@ -61,7 +61,7 @@ _ = {() -> Void in
         var count = 0
         a.map({ (e) -> Void in
             if e == elem {
-                count++
+                count += 1
             }
         })
         return (elem, count)
@@ -244,9 +244,44 @@ for i in 1...3 {
     }()
 }
 
+var arr:[Int] = [1, 5, 7, 3, 2, 4, 9, 8]
 
+func bubble_sort<T:Comparable>(a: [T]) -> [T] {
+    var arr = a
+    for i in 0..<arr.count{
+        for j in (i+1)..<arr.count{
+            if arr[j] < arr[i] {
+                swap(&arr[i], &arr[j])
+            }
+        }
+    }
+    
+    return arr
+}
 
+print(bubble_sort(arr))
 
+let stringArr = ["game", "alpha", "Alpha", "bravo"]
+let orderdStringArr = stringArr.sort { (a, b) -> Bool in
+    return a < b
+}
+print(orderdStringArr)
+
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+
+var largest = 0
+for (kind, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+print("\(largest)")
 
 
 

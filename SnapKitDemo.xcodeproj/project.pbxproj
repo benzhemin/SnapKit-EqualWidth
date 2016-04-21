@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C408FE0C1C34DDAD005DDD99 /* PYDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */; };
 		C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */; };
+		C4229CBA1CBDE2A3002E22AD /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */; };
 		C431DA811C523218001A22D6 /* NeedsDisplayForKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C431DA801C523218001A22D6 /* NeedsDisplayForKeyViewController.swift */; };
 		C43A21531C322A7B00C8B68A /* RWAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */; };
 		C43A21551C323D9D00C8B68A /* RWGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */; };
@@ -38,6 +39,7 @@
 		C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49880061C27E99A001F5A62 /* View+SnapKit.swift */; };
 		C49880141C27E99A001F5A62 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49880071C27E99A001F5A62 /* ViewController+SnapKit.swift */; };
 		C4A1F2311C3CB04900D87FF3 /* AnimationExplainedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */; };
+		C4A401E31CB0C40C00846822 /* YYPageBarStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */; };
 		C4F9E96C1CA651890047565A /* IntrinsicContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */; };
 		C4F9E96E1CA6C97E0047565A /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F9E96D1CA6C97E0047565A /* TagViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,7 @@
 		C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PYDropMenuViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/PYDropMenuViewController.swift; sourceTree = "<group>"; };
 		C408FE0D1C34EC54005DDD99 /* learnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = learnSwift.playground; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/learnSwift.playground; sourceTree = "<group>"; };
 		C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationsViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/AnimationsViewController.swift; sourceTree = "<group>"; };
+		C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/DrawViewController.swift; sourceTree = "<group>"; };
 		C431DA801C523218001A22D6 /* NeedsDisplayForKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedsDisplayForKeyViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/NeedsDisplayForKeyViewController.swift; sourceTree = "<group>"; };
 		C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWAutoLayoutViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWGalleryViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/RWGalleryViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +82,10 @@
 		C49880051C27E99A001F5A62 /* SourceLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceLocation.swift; sourceTree = "<group>"; };
 		C49880061C27E99A001F5A62 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		C49880071C27E99A001F5A62 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		C49BFD341CC358C0004C9F9A /* swiftTour.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = swiftTour.playground; sourceTree = "<group>"; };
 		C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationExplainedViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/AnimationExplainedViewController.swift; sourceTree = "<group>"; };
+		C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YYPageBarStripViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/YYPageBarStripViewController.swift; sourceTree = "<group>"; };
+		C4E0F22B1CC22FB900FAF316 /* takestep.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = takestep.playground; sourceTree = "<group>"; };
 		C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntrinsicContentViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/IntrinsicContentViewController.swift; sourceTree = "<group>"; };
 		C4F9E96D1CA6C97E0047565A /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,12 +139,16 @@
 				C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */,
 				C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */,
 				C4F9E96D1CA6C97E0047565A /* TagViewController.swift */,
+				C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */,
+				C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */,
 				C4987FEE1C27E96E001F5A62 /* Assets.xcassets */,
 				C4987FF31C27E96E001F5A62 /* Info.plist */,
 				C408FE0D1C34EC54005DDD99 /* learnSwift.playground */,
 				C47CDEE11C675B8700CAC73E /* SwiftHEXColors.swift */,
 				C46C28351C8C4C6B00498BB1 /* compute.playground */,
 				C46C28CB1C99024600498BB1 /* exercise.playground */,
+				C4E0F22B1CC22FB900FAF316 /* takestep.playground */,
+				C49BFD341CC358C0004C9F9A /* swiftTour.playground */,
 			);
 			path = SnapKitDemo;
 			sourceTree = "<group>";
@@ -236,6 +246,7 @@
 			files = (
 				C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */,
 				C49880081C27E99A001F5A62 /* Constraint.swift in Sources */,
+				C4229CBA1CBDE2A3002E22AD /* DrawViewController.swift in Sources */,
 				C431DA811C523218001A22D6 /* NeedsDisplayForKeyViewController.swift in Sources */,
 				C49880101C27E99A001F5A62 /* LayoutConstraint.swift in Sources */,
 				C498800E1C27E99A001F5A62 /* Debugging.swift in Sources */,
@@ -247,6 +258,7 @@
 				C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */,
 				C48F440D1C43CA75006FB08D /* SpringAnimationViewController.swift in Sources */,
 				C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */,
+				C4A401E31CB0C40C00846822 /* YYPageBarStripViewController.swift in Sources */,
 				C4F9E96E1CA6C97E0047565A /* TagViewController.swift in Sources */,
 				C4A1F2311C3CB04900D87FF3 /* AnimationExplainedViewController.swift in Sources */,
 				C498800C1C27E99A001F5A62 /* ConstraintMaker.swift in Sources */,

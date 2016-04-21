@@ -9,24 +9,11 @@
 import Foundation
 import UIKit
 
-class RandomColor {
-    class func getRandomColor() -> UIColor{
-        
-        let randomRed:CGFloat = CGFloat(drand48())
-        
-        let randomGreen:CGFloat = CGFloat(drand48())
-        
-        let randomBlue:CGFloat = CGFloat(drand48())
-        
-        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-    }
-}
-
 class YYTagConfig {
     
     let defaultFontSize = CGFloat(13.0)
     let textColor = RandomColor.getRandomColor()
-
+    
     let normalBackgroundColor = UIColor.init(red:0, green:0, blue:0, alpha: 0.1)//UIColor.lightGrayColor()
     let highlightBackgroundColor = UIColor.whiteColor()
     
@@ -82,7 +69,154 @@ class YYTagButton : UIButton {
 }
 
 let horizPadding = CGFloat(8)
-let vertiPadding = CGFloat(10)
+let vertiPadding = CGFloat(8)
+
+class TagsView : UIView {
+    var tagButtons: [YYTagButton]!
+    
+    var intinsicSize : CGSize! = CGSizeMake(0, 0)
+    var preferredMaxLayoutWidth : CGFloat = 0 {
+        didSet{
+            layoutTags = false
+            self.invalidateIntrinsicContentSize()
+        }
+    }
+    
+    var layoutTags = false
+    
+    init(tags: [String]){
+        self.tagButtons = [YYTagButton]()
+        super.init(frame: CGRectZero)
+        
+        self.layer.borderColor = UIColor.blueColor().CGColor
+        self.layer.borderWidth = 3.0
+        
+        for tag in tags {
+            let tagConfig = YYTagConfig(text: tag)
+            let tagButton = YYTagButton(config:tagConfig).configButton()
+            
+            tagButtons.append(tagButton)
+            addSubview(tagButton)
+        }
+    }
+    
+    required init(coder deCoder: NSCoder){
+        fatalError("This class does not support NSCoding")
+    }
+    
+    func addTag(tag:String) {
+        let tagConfig = YYTagConfig(text: tag)
+        let tagButton = YYTagButton(config: tagConfig).configButton()
+        
+        tagButtons.append(tagButton)
+        self.addSubview(tagButton)
+    }
+    
+    func removeTag(){
+        if self.tagButtons.count > 0 {
+            let tagView = tagButtons.removeLast()
+            tagView.removeFromSuperview()
+        }
+    }
+    
+    override func layoutSubviews() {
+        self.preferredMaxLayoutWidth = self.frame.size.width
+        
+        super.layoutSubviews()
+        
+        self.updateTagsCoordinates()
+    }
+    
+    func updateTagsCoordinates() {
+        if layoutTags {
+            return
+        }
+        
+        let width = self.preferredMaxLayoutWidth
+        
+        var startY = vertiPadding
+        var startX = horizPadding
+        
+        var lastBtn: YYTagButton?
+        for tagBtn in self.tagButtons {
+            let size = tagBtn.intrinsicContentSize()
+            
+            if (startX + size.width) <= width {
+                tagBtn.frame = CGRectMake(startX, startY,
+                                          tagBtn.intrinsicContentSize().width,
+                                          tagBtn.intrinsicContentSize().height)
+                
+                startX = CGRectGetMaxX(tagBtn.frame) + horizPadding
+            } else {
+                if let lastBtn = lastBtn {
+                    startY += CGRectGetHeight(lastBtn.frame) + vertiPadding
+                    startX = horizPadding
+                }
+                
+                tagBtn.frame = CGRectMake(startX, startY,
+                                          tagBtn.intrinsicContentSize().width,
+                                          tagBtn.intrinsicContentSize().height)
+                
+                startX = CGRectGetMaxX(tagBtn.frame) + horizPadding
+            }
+            
+            lastBtn = tagBtn
+        }
+        
+        self.intinsicSize = CGSize(width:width, height:0)
+        
+        if self.tagButtons.count > 0 {
+            self.intinsicSize = CGSize(width:width, height:CGRectGetMaxY(lastBtn!.frame))
+        }
+        
+        layoutTags = true
+    }
+    
+    
+    override func intrinsicContentSize() -> CGSize {
+        if self.tagButtons.count <= 0 {
+            return CGSizeZero
+        }
+        
+        if self.preferredMaxLayoutWidth > 0 {
+            var startX = horizPadding
+            var startY = vertiPadding
+            
+            var lastBtn : YYTagButton?
+            for tagBtn in self.tagButtons {
+                let size = tagBtn.intrinsicContentSize()
+                
+                if startX+size.width > self.preferredMaxLayoutWidth {
+                    //起始元素要填充计算
+                    startX = horizPadding + size.width + horizPadding
+                    startY += size.height + vertiPadding
+                }else {
+                    startX += size.width + horizPadding
+                }
+                
+                lastBtn = tagBtn
+                
+                print("\(tagBtn.titleLabel!.text!) startX \(startX) startY \(startY) width \(self.preferredMaxLayoutWidth)")
+            }
+            
+            startY += lastBtn!.intrinsicContentSize().height + vertiPadding
+            print("startX \(startX) startY \(startY) width \(self.preferredMaxLayoutWidth)")
+            
+            return CGSizeMake(self.preferredMaxLayoutWidth, startY)
+        }
+        else {
+            var intrinsicWidth : CGFloat = horizPadding
+            let intrinsicHeight : CGFloat = tagButtons.first!.intrinsicContentSize().height + vertiPadding*2
+            
+            for tagBtn in self.tagButtons {
+                let size = tagBtn.intrinsicContentSize()
+                intrinsicWidth += size.width + horizPadding
+            }
+            
+            return CGSizeMake(intrinsicWidth, intrinsicHeight)
+        }
+    }
+}
 
 class TagViewController : UIViewController{
     
@@ -90,6 +224,7 @@ class TagViewController : UIViewController{
     var tagButtons = [YYTagButton]()
     
     var contentView: UIView!
+    var tagsView: TagsView!
     
     var addTagsButton: YYTagButton!
     var removeTagsButton: YYTagButton!
@@ -106,23 +241,23 @@ class TagViewController : UIViewController{
         contentView = UIView()
         contentView.userInteractionEnabled = true
         contentView.backgroundColor = UIColor.whiteColor()
-
+        
+        tagsView = TagsView(tags:tags)
+        tagsView.userInteractionEnabled = true
+        contentView.addSubview(tagsView)
+        tagsView.snp_makeConstraints { (make) in
+            make.leading.equalTo(contentView)
+            make.trailing.equalTo(contentView)
+            make.top.equalTo(contentView.snp_top)
+        }
+        
         contentView.layer.borderWidth = 2.0
         contentView.layer.borderColor = UIColor.redColor().CGColor
         self.view.addSubview(contentView)
         
-        contentView.snp_remakeConstraints { (make) in
+        contentView.snp_makeConstraints { (make) in
             make.leading.trailing.bottom.equalTo(self.view)
             make.top.equalTo(self.snp_topLayoutGuideBottom)
-        }
-        
-        for tag in tags {
-            let tagConfig = YYTagConfig(text: tag)
-            let tagButton = YYTagButton(config:tagConfig).configButton()
-            
-            contentView.addSubview(tagButton)
-            
-            tagButtons.append(tagButton)
         }
         
         addTagsButton = YYTagButton(config:YYTagConfig(text:"AddTag")).configButton()
@@ -141,7 +276,7 @@ class TagViewController : UIViewController{
     
     func panGesture(pan:UIPanGestureRecognizer){
         let location = pan.locationInView(self.view)
-
+        
         switch pan.state {
         case .Began:
             startPoint = location
@@ -151,7 +286,7 @@ class TagViewController : UIViewController{
             let transWidth = contentWidth + offsetX
             
             let adjustWidth = min(self.view.bounds.width, max(self.view.bounds.width/4, transWidth))
-            print("adjustWidth \(adjustWidth) ")
+            //print("adjustWidth \(adjustWidth) ")
             self.contentView.snp_remakeConstraints { (make) in
                 make.leading.equalTo(self.view.snp_leading)
                 make.width.equalTo(adjustWidth)
@@ -169,68 +304,29 @@ class TagViewController : UIViewController{
     
     func addTag(sender: UIButton){
         let random = Int(arc4random_uniform(UInt32(tags.count-1)))
-        let tagConfig = YYTagConfig(text: tags[random])
-        let tagButton = YYTagButton(config:tagConfig).configButton()
         
-        tagButton.lineNumber = tagButtons.last?.lineNumber ?? 0
-        
-        self.contentView.addSubview(tagButton)
-        tagButtons.append(tagButton)
-        
-        self.updateViewConstraints()
+        tagsView.addTag(tags[random])
     }
     
     func removeTag(sender: UIButton){
-        if !tagButtons.isEmpty {
-            
-            let tagButton = tagButtons.removeLast()
-            tagButton.removeFromSuperview()
-
-            self.updateViewConstraints()
-        }
+        tagsView.removeTag()
     }
     
     override func updateViewConstraints() {
         
-        addTagsButton.snp_makeConstraints { (make) in
+        addTagsButton.snp_remakeConstraints { (make) in
             make.bottom.equalTo(self.contentView.snp_bottom).offset(-10)
             make.centerX.equalTo(self.contentView.snp_centerX)
         }
         
-        removeTagsButton.snp_makeConstraints { (make) in
+        removeTagsButton.snp_remakeConstraints { (make) in
             make.leading.equalTo(addTagsButton.snp_trailing).offset(horizPadding)
             make.centerY.equalTo(addTagsButton.snp_centerY)
         }
         
-        var previous: YYTagButton?
-        for tagButton in tagButtons {
-            if let pre = previous {
-                
-                tagButton.snp_remakeConstraints(closure: { (make) in
-                    //新起一行
-                    if tagButton.lineNumber > pre.lineNumber {
-                        make.top.equalTo(pre.snp_bottom).offset(vertiPadding)
-                        make.leading.equalTo(tagButtons[0].snp_leading)
-                    }else {
-                        make.centerY.equalTo(pre.snp_centerY)
-                        make.leading.equalTo(pre.snp_trailing).offset(horizPadding)
-                    }
-                })
-                
-                previous = tagButton
-                
-            }else {
-                previous = tagButton
-                
-                tagButton.snp_remakeConstraints(closure: { (make) in
-                    make.leading.equalTo(self.contentView.snp_leading).offset(horizPadding)
-                    make.top.equalTo(self.snp_topLayoutGuideBottom).offset(vertiPadding)
-                })
-            }
-        }
-        
         super.updateViewConstraints()
     }
+    
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         
@@ -240,64 +336,5 @@ class TagViewController : UIViewController{
         }
         
         self.updateViewConstraints()
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        var lineNumber = 0
-        var needsConstraints = false
-        var previous : YYTagButton?
-        
-        let preferredWidth = CGRectGetMaxX(self.contentView.frame)
-        
-        outter:for (_, current) in self.tagButtons.enumerate() {
-            if let pre = previous {
-                print("pre \(pre.titleLabel?.text) current \(current.titleLabel?.text)")
-                
-                if current.lineNumber > pre.lineNumber {
-                    
-                    let afterCurButtons = tagButtons[tagButtons.indexOf(current)!..<tagButtons.count]
-                    
-                    let expectedMaxWidth = CGRectGetMaxX(pre.frame)
-                    
-                    for expectButton in afterCurButtons {
-                        if expectedMaxWidth+horizPadding+expectButton.bounds.size.width < preferredWidth {
-                            current.lineNumber = current.lineNumber - 1
-                            needsConstraints = true
-                        }else {
-                            break
-                        }
-                    }
-                    
-                    if needsConstraints {
-                        break outter
-                    }
-                    
-                }
-                
-                //区域缩小
-                if (CGRectGetMaxX(current.frame) > preferredWidth) {
-                    current.lineNumber = lineNumber+1
-                    needsConstraints = true
-                    break;
-                }else {
-                    lineNumber = current.lineNumber
-                }
-            }
-            previous = current
-        }
-        
-        if needsConstraints {
-            
-            
-        }
-        
-        self.view.setNeedsUpdateConstraints()
-        self.view.setNeedsLayout()
-        self.updateViewConstraints()
-        
-        
-        //super.viewDidLayoutSubviews()
     }
 }
