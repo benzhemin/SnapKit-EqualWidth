@@ -284,8 +284,14 @@ for (kind, numbers) in interestingNumbers {
 print("\(largest)")
 
 
+let dateString = "2015-4-10"
 
+let dateFormatter = NSDateFormatter()
+dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+dateFormatter.dateFormat = "yyyy-MM-dd"
 
+let date = dateFormatter.dateFromString(dateString)
 
+print(date)
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4087B141CDD749D005E7D11 /* ImageBlendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */; };
 		C408FE0C1C34DDAD005DDD99 /* PYDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */; };
 		C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */; };
 		C4229CBA1CBDE2A3002E22AD /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageBlendViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/ImageBlendViewController.swift; sourceTree = "<group>"; };
 		C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PYDropMenuViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/PYDropMenuViewController.swift; sourceTree = "<group>"; };
 		C408FE0D1C34EC54005DDD99 /* learnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = learnSwift.playground; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/learnSwift.playground; sourceTree = "<group>"; };
 		C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationsViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/AnimationsViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				C4F9E96D1CA6C97E0047565A /* TagViewController.swift */,
 				C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */,
 				C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */,
+				C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */,
 				C4987FEE1C27E96E001F5A62 /* Assets.xcassets */,
 				C4987FF31C27E96E001F5A62 /* Info.plist */,
 				C408FE0D1C34EC54005DDD99 /* learnSwift.playground */,
@@ -255,6 +258,7 @@
 				C4F9E96C1CA651890047565A /* IntrinsicContentViewController.swift in Sources */,
 				C48F44071C3F5F03006FB08D /* ClockAnimationViewController.swift in Sources */,
 				C47CDEE21C675B8700CAC73E /* SwiftHEXColors.swift in Sources */,
+				C4087B141CDD749D005E7D11 /* ImageBlendViewController.swift in Sources */,
 				C49880131C27E99A001F5A62 /* View+SnapKit.swift in Sources */,
 				C48F440D1C43CA75006FB08D /* SpringAnimationViewController.swift in Sources */,
 				C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */,

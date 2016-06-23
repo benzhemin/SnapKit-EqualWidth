@@ -23,7 +23,8 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
                           UIKitDynamicsViewController.self, UserGuideViewController.self,
                           SpringAnimationViewController.self, NeedsDisplayForKeyViewController.self,
                           GradientViewController.self, SearchBarViewController.self,
-                          IntrinsicContentViewController.self, TagViewController.self, DrawViewController.self]
+                          IntrinsicContentViewController.self, TagViewController.self, DrawViewController.self,
+                          ImageBlendViewController.self]
         
         if let coder = aDecoder {
             super.init(coder: coder)
