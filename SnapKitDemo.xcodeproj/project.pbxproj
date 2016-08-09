@@ -16,6 +16,7 @@
 		C43A21551C323D9D00C8B68A /* RWGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */; };
 		C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21561C33787700C8B68A /* PracticeListViewController.swift */; };
 		C43B033D1C2F8235001D0B9D /* WHEqualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */; };
+		C46A89D71D5A144F00339FED /* ReplicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46A89D61D5A144F00339FED /* ReplicateViewController.swift */; };
 		C47CDEE01C675A3200CAC73E /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */; };
 		C47CDEE21C675B8700CAC73E /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDEE11C675B8700CAC73E /* SwiftHEXColors.swift */; };
 		C47CDF281C734F5400CAC73E /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */; };
@@ -46,25 +47,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageBlendViewController.swift; path = ImageBlendViewController.swift; sourceTree = "<group>"; };
-		C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PYDropMenuViewController.swift; path = PYDropMenuViewController.swift; sourceTree = "<group>"; };
-		C408FE0D1C34EC54005DDD99 /* learnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = learnSwift.playground; path = learnSwift.playground; sourceTree = "<group>"; };
-		C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationsViewController.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
-		C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawViewController.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
-		C431DA801C523218001A22D6 /* NeedsDisplayForKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedsDisplayForKeyViewController.swift; path = NeedsDisplayForKeyViewController.swift; sourceTree = "<group>"; };
-		C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWAutoLayoutViewController.swift; path = RWAutoLayoutViewController.swift; sourceTree = "<group>"; };
-		C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RWGalleryViewController.swift; path = RWGalleryViewController.swift; sourceTree = "<group>"; };
-		C43A21561C33787700C8B68A /* PracticeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticeListViewController.swift; path = PracticeListViewController.swift; sourceTree = "<group>"; };
-		C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WHEqualViewController.swift; path = WHEqualViewController.swift; sourceTree = "<group>"; };
+		C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBlendViewController.swift; sourceTree = "<group>"; };
+		C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PYDropMenuViewController.swift; sourceTree = "<group>"; };
+		C408FE0D1C34EC54005DDD99 /* learnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = learnSwift.playground; sourceTree = "<group>"; };
+		C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
+		C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		C431DA801C523218001A22D6 /* NeedsDisplayForKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedsDisplayForKeyViewController.swift; sourceTree = "<group>"; };
+		C43A21521C322A7B00C8B68A /* RWAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWGalleryViewController.swift; sourceTree = "<group>"; };
+		C43A21561C33787700C8B68A /* PracticeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeListViewController.swift; sourceTree = "<group>"; };
+		C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHEqualViewController.swift; sourceTree = "<group>"; };
+		C46A89D61D5A144F00339FED /* ReplicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReplicateViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/ReplicateViewController.swift; sourceTree = "<group>"; };
 		C46C28351C8C4C6B00498BB1 /* compute.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = compute.playground; sourceTree = "<group>"; };
-		C46C28CB1C99024600498BB1 /* exercise.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = exercise.playground; path = exercise.playground; sourceTree = "<group>"; };
-		C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientViewController.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		C46C28CB1C99024600498BB1 /* exercise.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = exercise.playground; sourceTree = "<group>"; };
+		C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 		C47CDEE11C675B8700CAC73E /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
-		C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBarViewController.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
-		C48F44061C3F5F03006FB08D /* ClockAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockAnimationViewController.swift; path = ClockAnimationViewController.swift; sourceTree = "<group>"; };
-		C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitDynamicsViewController.swift; path = UIKitDynamicsViewController.swift; sourceTree = "<group>"; };
-		C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserGuideViewController.swift; path = UserGuideViewController.swift; sourceTree = "<group>"; };
-		C48F440C1C43CA75006FB08D /* SpringAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpringAnimationViewController.swift; path = SpringAnimationViewController.swift; sourceTree = "<group>"; };
+		C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		C48F44061C3F5F03006FB08D /* ClockAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockAnimationViewController.swift; sourceTree = "<group>"; };
+		C48F44081C412295006FB08D /* UIKitDynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitDynamicsViewController.swift; sourceTree = "<group>"; };
+		C48F440A1C4209D1006FB08D /* UserGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGuideViewController.swift; sourceTree = "<group>"; };
+		C48F440C1C43CA75006FB08D /* SpringAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimationViewController.swift; sourceTree = "<group>"; };
 		C4987FE41C27E96E001F5A62 /* SnapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4987FE71C27E96E001F5A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4987FE91C27E96E001F5A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,10 +87,10 @@
 		C49880061C27E99A001F5A62 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		C49880071C27E99A001F5A62 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
 		C49BFD341CC358C0004C9F9A /* swiftTour.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = swiftTour.playground; sourceTree = "<group>"; };
-		C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationExplainedViewController.swift; path = AnimationExplainedViewController.swift; sourceTree = "<group>"; };
-		C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YYPageBarStripViewController.swift; path = YYPageBarStripViewController.swift; sourceTree = "<group>"; };
+		C4A1F2301C3CB04900D87FF3 /* AnimationExplainedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationExplainedViewController.swift; sourceTree = "<group>"; };
+		C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPageBarStripViewController.swift; sourceTree = "<group>"; };
 		C4E0F22B1CC22FB900FAF316 /* takestep.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = takestep.playground; sourceTree = "<group>"; };
-		C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntrinsicContentViewController.swift; path = IntrinsicContentViewController.swift; sourceTree = "<group>"; };
+		C4F9E96B1CA651890047565A /* IntrinsicContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrinsicContentViewController.swift; sourceTree = "<group>"; };
 		C4F9E96D1CA6C97E0047565A /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */,
 				C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */,
 				C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */,
+				C46A89D61D5A144F00339FED /* ReplicateViewController.swift */,
 				C4987FEE1C27E96E001F5A62 /* Assets.xcassets */,
 				C4987FF31C27E96E001F5A62 /* Info.plist */,
 				C408FE0D1C34EC54005DDD99 /* learnSwift.playground */,
@@ -251,6 +254,7 @@
 				C49880081C27E99A001F5A62 /* Constraint.swift in Sources */,
 				C4229CBA1CBDE2A3002E22AD /* DrawViewController.swift in Sources */,
 				C431DA811C523218001A22D6 /* NeedsDisplayForKeyViewController.swift in Sources */,
+				C46A89D71D5A144F00339FED /* ReplicateViewController.swift in Sources */,
 				C49880101C27E99A001F5A62 /* LayoutConstraint.swift in Sources */,
 				C498800E1C27E99A001F5A62 /* Debugging.swift in Sources */,
 				C498800F1C27E99A001F5A62 /* EdgeInsets.swift in Sources */,

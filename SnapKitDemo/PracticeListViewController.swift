@@ -24,7 +24,7 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
                           SpringAnimationViewController.self, NeedsDisplayForKeyViewController.self,
                           GradientViewController.self, SearchBarViewController.self,
                           IntrinsicContentViewController.self, TagViewController.self, DrawViewController.self,
-                          ImageBlendViewController.self]
+                          ImageBlendViewController.self, ReplicateViewController.self]
         
         if let coder = aDecoder {
             super.init(coder: coder)
@@ -87,7 +87,7 @@ class PracticeListViewController: UIViewController , UITableViewDataSource, UITa
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
         var controller: UIViewController? = nil
         
