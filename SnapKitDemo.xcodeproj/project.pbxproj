@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17702DAC1D631A0E002B5FAE /* ReplicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17702DAB1D631A0E002B5FAE /* ReplicateViewController.swift */; };
 		C4087B141CDD749D005E7D11 /* ImageBlendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */; };
 		C408FE0C1C34DDAD005DDD99 /* PYDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */; };
 		C408FE111C3A7D9F005DDD99 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408FE101C3A7D9F005DDD99 /* AnimationsViewController.swift */; };
@@ -16,7 +17,6 @@
 		C43A21551C323D9D00C8B68A /* RWGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */; };
 		C43A21571C33787700C8B68A /* PracticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A21561C33787700C8B68A /* PracticeListViewController.swift */; };
 		C43B033D1C2F8235001D0B9D /* WHEqualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */; };
-		C46A89D71D5A144F00339FED /* ReplicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46A89D61D5A144F00339FED /* ReplicateViewController.swift */; };
 		C47CDEE01C675A3200CAC73E /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */; };
 		C47CDEE21C675B8700CAC73E /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDEE11C675B8700CAC73E /* SwiftHEXColors.swift */; };
 		C47CDF281C734F5400CAC73E /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CDF271C734F5400CAC73E /* SearchBarViewController.swift */; };
@@ -47,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17702DAB1D631A0E002B5FAE /* ReplicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplicateViewController.swift; sourceTree = "<group>"; };
 		C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBlendViewController.swift; sourceTree = "<group>"; };
 		C408FE0B1C34DDAD005DDD99 /* PYDropMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PYDropMenuViewController.swift; sourceTree = "<group>"; };
 		C408FE0D1C34EC54005DDD99 /* learnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = learnSwift.playground; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		C43A21541C323D9D00C8B68A /* RWGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWGalleryViewController.swift; sourceTree = "<group>"; };
 		C43A21561C33787700C8B68A /* PracticeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeListViewController.swift; sourceTree = "<group>"; };
 		C43B033C1C2F8235001D0B9D /* WHEqualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHEqualViewController.swift; sourceTree = "<group>"; };
-		C46A89D61D5A144F00339FED /* ReplicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReplicateViewController.swift; path = ../../../../../Bob/Desktop/test/SnapKitDemo/SnapKitDemo/ReplicateViewController.swift; sourceTree = "<group>"; };
 		C46C28351C8C4C6B00498BB1 /* compute.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = compute.playground; sourceTree = "<group>"; };
 		C46C28CB1C99024600498BB1 /* exercise.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = exercise.playground; sourceTree = "<group>"; };
 		C47CDEDF1C675A3200CAC73E /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				C4A401E21CB0C40C00846822 /* YYPageBarStripViewController.swift */,
 				C4229CB91CBDE2A3002E22AD /* DrawViewController.swift */,
 				C4087B131CDD749D005E7D11 /* ImageBlendViewController.swift */,
-				C46A89D61D5A144F00339FED /* ReplicateViewController.swift */,
+				17702DAB1D631A0E002B5FAE /* ReplicateViewController.swift */,
 				C4987FEE1C27E96E001F5A62 /* Assets.xcassets */,
 				C4987FF31C27E96E001F5A62 /* Info.plist */,
 				C408FE0D1C34EC54005DDD99 /* learnSwift.playground */,
@@ -254,7 +254,7 @@
 				C49880081C27E99A001F5A62 /* Constraint.swift in Sources */,
 				C4229CBA1CBDE2A3002E22AD /* DrawViewController.swift in Sources */,
 				C431DA811C523218001A22D6 /* NeedsDisplayForKeyViewController.swift in Sources */,
-				C46A89D71D5A144F00339FED /* ReplicateViewController.swift in Sources */,
+				17702DAC1D631A0E002B5FAE /* ReplicateViewController.swift in Sources */,
 				C49880101C27E99A001F5A62 /* LayoutConstraint.swift in Sources */,
 				C498800E1C27E99A001F5A62 /* Debugging.swift in Sources */,
 				C498800F1C27E99A001F5A62 /* EdgeInsets.swift in Sources */,
